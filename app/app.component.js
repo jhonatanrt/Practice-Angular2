@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var github_service_1 = require("./services/github.service");
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -16,7 +17,9 @@ AppComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'my-app',
-        templateUrl: 'app.component.html'
+        template: "\n  <navbar></navbar>\n  <div class=\"container\">\n  <profile></profile>\n  </div>\n  ",
+        providers: [github_service_1.GithubService]
+        // templateUrl: 'app.component.html'
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
