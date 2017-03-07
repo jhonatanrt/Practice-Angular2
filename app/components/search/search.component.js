@@ -7,26 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var github_service_1 = require("./services/github.service");
-var AppComponent = (function () {
-    function AppComponent() {
+var SearchComponent = (function () {
+    function SearchComponent() {
     }
-    return AppComponent;
+    return SearchComponent;
 }());
-AppComponent = __decorate([
+SearchComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'my-app',
-        templateUrl: 'app.component.html',
-        // template: `
-        // <navbar></navbar>
-        // <div class="container">
-        // <profile></profile>
-        // </div>
-        // `,
-        providers: [github_service_1.GithubService]
-        // templateUrl: 'app.component.html'
+        selector: 'search',
+        templateUrl: 'search.component.html'
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], SearchComponent);
+exports.SearchComponent = SearchComponent;
+//# sourceMappingURL=search.component.js.map

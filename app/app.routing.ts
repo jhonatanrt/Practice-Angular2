@@ -2,7 +2,9 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import {HomeComponent} from './components/pages/home.component';
-import {AboutComponent} from './components/pages/about.component';
+import {AboutComponent} from './components/about/about.component';
+import {SearchComponent} from './components/search/search.component';
+
 
 
 const appRoutes: Routes = [
@@ -13,7 +15,11 @@ const appRoutes: Routes = [
     {
         path: 'about',
         component: AboutComponent
+    },{
+        path: 'search',
+        component: SearchComponent
     }
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

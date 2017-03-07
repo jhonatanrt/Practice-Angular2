@@ -9,7 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var NavbarComponent = (function () {
     function NavbarComponent() {
-        this.branding = 'My Website';
+        // branding = 'My Website';
+        this.branding = 'Spotifull';
     }
     return NavbarComponent;
 }());

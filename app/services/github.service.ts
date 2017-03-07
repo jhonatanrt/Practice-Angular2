@@ -26,3 +26,4 @@ export class GithubService{
     updateUser(username:string){
         this.username = username;
     }
+}

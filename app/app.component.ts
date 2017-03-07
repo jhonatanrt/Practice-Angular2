@@ -5,12 +5,13 @@ import { GithubService } from './services/github.service';
 @Component({
   moduleId: module.id,
   selector: 'my-app',
-  template: `
-  <navbar></navbar>
-  <div class="container">
-  <profile></profile>
-  </div>
-  `,
+  templateUrl: 'app.component.html',
+  // template: `
+  // <navbar></navbar>
+  // <div class="container">
+  // <profile></profile>
+  // </div>
+  // `,
   providers: [GithubService]
   // templateUrl: 'app.component.html'
 })

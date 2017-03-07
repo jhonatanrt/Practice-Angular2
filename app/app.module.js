@@ -15,8 +15,9 @@ var app_component_1 = require("./app.component");
 var navbar_component_1 = require("./components/navbar/navbar.component");
 var jumbotron_component_1 = require("./components/jumbotron/jumbotron.component");
 //pages
-var about_component_1 = require("./components/pages/about.component");
+var about_component_1 = require("./components/about/about.component");
 var home_component_1 = require("./components/pages/home.component");
+var search_component_1 = require("./components/search/search.component");
 var profile_component_1 = require("./components/profile/profile.component");
 //routes
 var app_routing_1 = require("./app.routing");
@@ -31,6 +32,7 @@ AppModule = __decorate([
         declarations: [app_component_1.AppComponent,
             profile_component_1.ProfileComponent,
             navbar_component_1.NavbarComponent,
+            search_component_1.SearchComponent,
             jumbotron_component_1.JumbotronComponent,
             about_component_1.AboutComponent,
             home_component_1.HomeComponent

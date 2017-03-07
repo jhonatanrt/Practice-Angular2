@@ -9,8 +9,9 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {JumbotronComponent} from './components/jumbotron/jumbotron.component';
 
 //pages
-import {AboutComponent} from './components/pages/about.component';
+import {AboutComponent} from './components/about/about.component';
 import {HomeComponent} from './components/pages/home.component';
+import {SearchComponent} from './components/search/search.component';
 import {ProfileComponent} from './components/profile/profile.component';
 
 //routes
@@ -22,6 +23,7 @@ import {routing} from './app.routing';
   declarations: [ AppComponent, 
                   ProfileComponent,
                   NavbarComponent,
+                  SearchComponent,
                   JumbotronComponent,
                   AboutComponent,
                   HomeComponent

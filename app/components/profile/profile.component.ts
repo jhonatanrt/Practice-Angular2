@@ -28,5 +28,4 @@ export class ProfileComponent {
                  console.log(repos);
              })
          }
-    }
- }
+}
