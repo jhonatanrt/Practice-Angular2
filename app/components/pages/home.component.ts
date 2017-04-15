@@ -12,8 +12,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.parameter = JSON.parse(localStorage.getItem('parameter'));
     console.log(JSON.parse(localStorage.getItem('parameter')));
-    console.log(this.parameter);
-    this.data = this.parameter.data.validity_min_day;
+    // console.log(this.parameter);
+    if(this.parameter!=null)
+      this.data = this.parameter.data.validity_min_day;
   }
 
   constructor(){
