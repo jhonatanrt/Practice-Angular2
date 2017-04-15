@@ -12,21 +12,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-var SpotifyService = (function () {
-    function SpotifyService(_http) {
+var ParameterService = (function () {
+    function ParameterService(_http) {
         this._http = _http;
+        this.parameterUrl = '//www.json-generator.com/api/json/get/chozaoyyGa?indent=2';
+        console.log('parameter service ...');
     }
-    SpotifyService.prototype.searchMusic = function (str, type) {
-        if (type === void 0) { type = 'artist'; }
-        this.searchUrl = 'https://api.spotify.com/v1/search?query=' + str + '&offset=0&limit=20&type=' + type + '&market=US';
-        return this._http.get(this.searchUrl)
-            .map(function (res) { return res.json(); });
+    ParameterService.prototype.getParameter = function () {
+        return this._http.get(this.parameterUrl)
+            .map(function (response) { return response.json(); });
     };
-    return SpotifyService;
+    return ParameterService;
 }());
-SpotifyService = __decorate([
+ParameterService = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [http_1.Http])
-], SpotifyService);
-exports.SpotifyService = SpotifyService;
-//# sourceMappingURL=spotify.service.js.map
+], ParameterService);
+exports.ParameterService = ParameterService;
+//# sourceMappingURL=parameter.service.js.map

@@ -14,11 +14,11 @@ var spotify_service_1 = require("../../services/spotify.service");
 var SearchComponent = (function () {
     function SearchComponent(_spotifyService) {
         this._spotifyService = _spotifyService;
-        this.searchStr = '';
     }
     SearchComponent.prototype.searchMusic = function () {
+        console.log(this.searchStr);
         this._spotifyService.searchMusic(this.searchStr).subscribe(function (res) {
-            console.log(res);
+            console.log(res.artists.items);
         });
     };
     return SearchComponent;

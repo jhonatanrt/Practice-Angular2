@@ -1,0 +1,1 @@
+{"version":3,"file":"protected.component.js","sourceRoot":"","sources":["protected.component.ts"],"names":[],"mappings":";;;;;;;;AAAA,sCAA0C;AAO1C,IAAa,kBAAkB;IAA/B;IAEC,CAAC;IAAD,yBAAC;AAAD,CAAC,AAFF,IAEE;AAFW,kBAAkB;IAL9B,gBAAS,CAAC;QACT,QAAQ,EAAC,MAAM,CAAC,EAAE;QAClB,QAAQ,EAAE,WAAW;QACrB,WAAW,EAAE,0BAA0B,CAAC,0BAA0B;KACnE,CAAC;GACW,kBAAkB,CAE7B;AAFW,gDAAkB"}

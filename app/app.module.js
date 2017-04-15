@@ -19,8 +19,14 @@ var about_component_1 = require("./components/about/about.component");
 var home_component_1 = require("./components/pages/home.component");
 var search_component_1 = require("./components/search/search.component");
 var profile_component_1 = require("./components/profile/profile.component");
+var login_component_1 = require("./components/Login/login.component");
+var logout_component_1 = require("./components/logout/logout.component");
+var protected_component_1 = require("./components/protected/protected.component");
+var signup_component_1 = require("./components/signup/signup.component");
 //routes
 var app_routing_1 = require("./app.routing");
+var auth_guard_1 = require("./services/auth.guard");
+var auth_service_1 = require("./services/auth.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,15 +34,24 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule, forms_1.FormsModule],
+        imports: [platform_browser_1.BrowserModule,
+            app_routing_1.routing,
+            http_1.HttpModule,
+            forms_1.FormsModule,
+            forms_1.ReactiveFormsModule],
         declarations: [app_component_1.AppComponent,
             profile_component_1.ProfileComponent,
             navbar_component_1.NavbarComponent,
             search_component_1.SearchComponent,
             jumbotron_component_1.JumbotronComponent,
             about_component_1.AboutComponent,
-            home_component_1.HomeComponent
+            home_component_1.HomeComponent,
+            login_component_1.LoginComponent,
+            logout_component_1.LogoutComponent,
+            protected_component_1.ProtectedComponent,
+            signup_component_1.SignUpComponent
         ],
+        providers: [auth_guard_1.AuthGuard, auth_service_1.AuthService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

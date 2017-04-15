@@ -10,23 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
-require("rxjs/add/operator/map");
-var SpotifyService = (function () {
-    function SpotifyService(_http) {
-        this._http = _http;
+var auth_service_1 = require("./auth.service");
+var AuthGuard = (function () {
+    function AuthGuard(_authService) {
+        this._authService = _authService;
     }
-    SpotifyService.prototype.searchMusic = function (str, type) {
-        if (type === void 0) { type = 'artist'; }
-        this.searchUrl = 'https://api.spotify.com/v1/search?query=' + str + '&offset=0&limit=20&type=' + type + '&market=US';
-        return this._http.get(this.searchUrl)
-            .map(function (res) { return res.json(); });
+    AuthGuard.prototype.canActivate = function (route, state) {
+        console.log("protected", this._authService.isAuthenticated());
+        return this._authService.isAuthenticated();
     };
-    return SpotifyService;
+    return AuthGuard;
 }());
-SpotifyService = __decorate([
+AuthGuard = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http])
-], SpotifyService);
-exports.SpotifyService = SpotifyService;
-//# sourceMappingURL=spotify.service.js.map
+    __metadata("design:paramtypes", [auth_service_1.AuthService])
+], AuthGuard);
+exports.AuthGuard = AuthGuard;
+//# sourceMappingURL=auth.guard.js.map

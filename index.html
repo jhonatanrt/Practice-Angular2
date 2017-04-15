@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css">-->
     <link rel="stylesheet" href="styles.css">
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
@@ -19,6 +20,7 @@
             console.error(err);
         });
     </script>
+    
 </head>
 <!-- 3. Display the application -->
 
@@ -27,4 +29,17 @@
     <my-app>Loading...</my-app>
 </body>
 
+    <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD-CaFBpySDjbUw3IZBVHJIKF4w-hkUSUQ",
+        authDomain: "pruebaseguridad-50216.firebaseapp.com",
+        databaseURL: "https://pruebaseguridad-50216.firebaseio.com",
+        projectId: "pruebaseguridad-50216",
+        storageBucket: "pruebaseguridad-50216.appspot.com",
+        messagingSenderId: "1029751788542"
+    };
+    firebase.initializeApp(config);
+    </script>
 </html>
