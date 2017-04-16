@@ -24,13 +24,17 @@ import { AuthGuard } from './services/auth.guard';
 import { AuthService } from './services/auth.service';
 import { ParameterService } from './services/parameter.service';
 
+//scroll
+import { SlimScrollModule } from './modules/ng2-slimscroll'
+
 
 @NgModule({
   imports:      [ BrowserModule,
                   routing,
                   HttpModule,
                   FormsModule,
-                  ReactiveFormsModule ],
+                  ReactiveFormsModule,
+                  SlimScrollModule ],
   declarations: [ AppComponent, 
                   ProfileComponent,
                   NavbarComponent,

@@ -1,0 +1,7 @@
+.scroll-window {
+  width: 100%;
+  height: 300px;
+  font-size: 13px;
+  padding: 10px 10px;
+  border: solid 1px;
+}

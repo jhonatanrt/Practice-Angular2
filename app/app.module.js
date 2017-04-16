@@ -27,6 +27,8 @@ var signup_component_1 = require("./components/signup/signup.component");
 var app_routing_1 = require("./app.routing");
 var auth_guard_1 = require("./services/auth.guard");
 var auth_service_1 = require("./services/auth.service");
+//scroll
+var ng2_slimscroll_1 = require("./modules/ng2-slimscroll");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -38,7 +40,8 @@ AppModule = __decorate([
             app_routing_1.routing,
             http_1.HttpModule,
             forms_1.FormsModule,
-            forms_1.ReactiveFormsModule],
+            forms_1.ReactiveFormsModule,
+            ng2_slimscroll_1.SlimScrollModule],
         declarations: [app_component_1.AppComponent,
             profile_component_1.ProfileComponent,
             navbar_component_1.NavbarComponent,
